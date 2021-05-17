@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <!--
     <style>
+        /* 내 코드*/
         ul,li {list-style: none;}
         .box > li {
             border: 1px solid #777;
@@ -15,9 +17,10 @@
             height: 50px;
             text-align: center;
             line-height: 50px;
-            background-color: aqua; /*뒷배경 그냥 color 는 글자 색*/
-        }
+            background-color: aqua; /*뒷배경 그냥 color 는 글자 색s*/
+        } 
 
+       
         .wrap {
              text-align: center;
              background-color: black;
@@ -34,10 +37,28 @@
         }
         .gnb > li > a:hover{color: hotpink;}
     </style>
+    -->
+    
+    <style>
+    /* 선생님 코드*/
+    .wrap {text-align: center; background-color: black;}
+
+    .wrap > .gnb > li {
+        display: inline-block;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+    }
+    .wrap > .gnb > li > a {
+        color: white;
+        text-decoration: none;
+    }
+    .wrap > .gnb > li:hover {background-color: #777;}
+    </style>
 
 </head>
 <body>
-
+<!--
     <nav>
         <ul class="box">
             <li><a>메뉴1</a></li>
@@ -47,7 +68,7 @@
             <li><a>메뉴5</a></li>
         </ul>
     </nav>
-
+-->
     <nav class="wrap">
         <ul class="gnb">
             <li><a href="##">메뉴</a></li>
