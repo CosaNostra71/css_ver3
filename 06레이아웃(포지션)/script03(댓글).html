@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .wrap {
+            width: 80%; margin: 0 auto; 
+            border: 1px solid #777; position: relative; padding: 10px;
+            }
+        .wrap-img {position: absolute; left: 10px; top: 10px}
+        .wrap-img img {width: 50px;}
+        .wrap-text textarea {
+            width: 100%; height: 200px; padding: 10px;
+            box-sizing: border-box; resize: none;
+            } /*resize: vertical 위아래로만 이동*/
+
+        .wrap-text, .wrap-btn {padding-left: 60px;}
+        .wrap-btn {overflow: hidden;}
+        .left{float: left;}
+        .right {float: right;}
+        .left > input {display: block; width: 100px;}
+    </style>
+ <!---------------------------------아래 네모----------------------------------------->
+    <style>
+        .wrap-control {overflow: hidden;}
+        .p-left {float: left; padding-left: 60px;}
+        .p-right{float: right;}
+        p {padding: 0; margin: 0;}
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="wrap-img"> <!-- 이미지 -->
+            <img src="img/bgimg.png">
+        </div>
+
+        <div class="wrap-text"> <!-- 내용 -->
+            <textarea>내용</textarea>
+        </div>
+
+        <div class="wrap-btn"> <!-- 버튼영역-->
+            <div class="left">
+                <input type="text">
+                <input type="text" style="margin-top: 3px;">
+            </div>
+            <button class="right">등록하기</button>
+        </div>
+    </div>
+<!----------------------------아랫단--------------------------------------->
+    <div class="wrap">
+
+        <div class="wrap-img"> <!-- 물고기 -->
+            <img src="img/bgimg.png">
+        </div>
+
+        <div class="wrap-control"> <!-- 오른쪽 -->
+                <div class="p-left"> <!-- 내용 -->
+                  <p><strong>제목</strong></p>
+                  <p>내용</p>
+                </div>
+        <div> <!--버튼-->
+            <button class="p-right"><strong>수정</strong></button>
+            <button class="p-right"><strong>삭제</strong></button>
+        </div>
+    </div>
+    </div>
+
+</body>
+</html>
