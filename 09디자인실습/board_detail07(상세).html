@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- 부트스트랩 css파일 참조 -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <!-- 부트스트랩 js를 사용하기 위해서 jquery라이브러리 참조 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- 부트스트랩 js참조-->
+    <script src="js/bootstrap.js"></script>
+
+    <!-- 개인 커스텀 디자인 -->
+    <link rel="stylesheet" href="css/style.css">
+    <!--이미지 게시판 디자인-->
+    <link rel="stylesheet" href="css/board.css">
+    <!-- 게시판 상세 디자인-->
+    <link rel="stylesheet" href="css/board_detail.css">
+    
+</head>
+<body>
+
+    <header class="custom_header">
+        <nav class="navbar">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">
+                        <img src="img/logo.svg" width="30">
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#">메인</a></li>
+                        
+                        <li><a href="#">예약</a></li>
+
+                        <li><a href="#">QNA</a></li>
+                        
+                    </ul>
+                    <!-- 우측 회원 메뉴 -->
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">회원메뉴 <span
+                                    class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <!-- 검색버튼 (우측배치 navbar-right) -->
+                    <form class="navbar-form navbar-right" action="/action_page.php">
+                        <div class="input-group">
+                          <input type="text" class="form-control" placeholder="Search" name="search">
+                          <div class="input-group-btn">
+                            <button class="btn btn-default" type="submit">
+                              <i class="glyphicon glyphicon-search"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </form>
+
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section>
+
+        <div class="container"> <!-- 외부박스 -->
+            <div class="row"> <!-- 내부 박스-->
+                <div class="title"> <!-- 상세보기 영역-->
+                    <p>상세보기</p>
+                    <hr/>
+                </div>
+
+                <div class="col-md-6"> <!-- 제품 이미지-->
+                   <img src="img/detail.jpg" alt="상품">
+                </div>
+
+                <div class="col-lg-6"> <!-- 상품 내용 영역-->
+                    <div class="detail-item"><!-- 상품내용 -->
+                        <div class="detail-content"><!--내용-->
+                            <p class="item-title">[게릴라특가]30일체험가능! 벨라페이스 3컬러 LED마스크 눈마사지 겸용/4단계 시간조절/피부홈케어+사은품까지!</p>
+                            <hr/>
+                            <p class="item-price"><Strong>135,5000</Strong></p>
+                            <hr/>
+                            <p class="porter">
+                                무료배송<br/>
+                                상품별배송 | 택배배송 | 당일출고,12시 이전 결제 건까지 해당 (주말,공휴일제외)
+                            </p>
+                        </div>
+
+                        <div class="detail-btn"> <!-- 버튼 영역-->
+                            <ul class="all-price">
+                                <p class="price-left">총 상품금액</p> <!-- 총상품금액-->
+                                <p class="price-right">0원</p> <!-- 가격-->
+                            </ul>
+                            <div class="detail-btn-lr">
+                                <button type="button" class="btn btn-default btn-lg btn-block btn-left">장바구니</button>
+                                <button type="button" class="btn btn-primary btn-lg btn-block btn-right">구매하기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div> <!-- 상품평 영역-->
+
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+    <section>
+        <div class="container">
+            <!-- 외부 -->
+            <div class="row">
+                <!-- 내부 -->
+                <div class="col-xs-12 profile-box">
+                    <form class="reply-wrap">
+                        <div class="detail-img">
+                            <!-- 이미지 -->
+                            <img src="img/profile.png">
+                        </div>
+    
+                        <div class="reply-content">
+                            <!-- 글작성 칸 -->
+                            <textarea class="form-control" rows="3"></textarea>
+    
+                            <div class="info">
+                                <!-- id 비밀번호칸-->
+                                <div class="id">
+                                    <!-- id-->
+                                    <label for="usr">Name:</label>
+                                    <input type="text" class="form-control" id="usr">
+                                </div>
+                                <div class="info-right">
+                                    <button>등록하기</button>
+                                </div>
+                                <div class="pw">
+                                    <!-- 비밀번호-->
+                                    <label for="pwd">Password:</label>
+                                    <input type="password" class="form-control" id="pwd">
+                                </div>
+                            </div>
+                        </div>
+                        <div>
+                            <!-- 댓글영역-->
+                            <div>
+                                <!-- 아이디-->
+                                <p></p>
+                                <p></p>
+                            </div>
+                            <div>
+                                <!-- 댓글-->
+    
+                            </div>
+                        </div>
+                    </form>
+    
+                    <div>
+                        <!-- 댓글-->
+    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="fow">
+                <div class="col-md-7 col-sm-12">
+                    <div class="copyright">
+                        <a href=""><img src="img/logo.svg" width="30"></a>
+                        Coding404 | 대표자 : 김현우 | E-MAIL : gntj32100@naver.com<br />
+                        개인정보보호책임자 : 김현우 | KG-ITbank에서 오프라인 강의를 진행합니다<br />
+                        주소 : 서울시 강남구 <br />
+                        <address>©Bootstrap. ALL RIGHTS RESERVED</address>
+                    </div>
+                </div>
+    
+                <div class="col-md-5 col-sm-12">
+                    <ul class="footer-menu">
+                        <li><a href="">고객센터</a></li>
+                        <li><a href="">유용한정보</a></li>
+                        <li><a href="">개인정보취급방침</a></li>
+                        <li><a href="">QNA</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

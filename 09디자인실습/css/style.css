@@ -25,8 +25,11 @@ input, textarea, button, select {
 }
 ul,li,dl,ol {list-style: none;} /* 순서 요소들의 리스트스타일 제거*/
 
+/* 버튼과 input태그의 윤곽변경 */
 .btn {border-radius: 0px;}
 .form-control {border-radius: 0px;}
+.form-control:focus {border: 1px solid #333;}
+section {margin-top: 53px;}
 
 /*===========헤더=============*/
 .header_col1{
@@ -116,11 +119,17 @@ ul,li,dl,ol {list-style: none;} /* 순서 요소들의 리스트스타일 제거
 .navbar {
     margin: 0;
 }
-
+/* 배경색 */
 .custom_header {
     background-color: hsl(200, 21%, 29%);
-}
+    position: fixed;
+    top: 0;
+    left: 0;
 
+    width: 100%;
+    z-index: 50;
+}
+/* 태그색상 */
 .custom_header  nav  a {
     color: white;
 }
@@ -159,6 +168,7 @@ footer{
     background-color: #263238;
     color:#eee;
     padding: 40px 0;
+    margin-top: 3px;
 }
 footer .copyright{
     font-size: 15px;
@@ -180,4 +190,181 @@ footer .footer-menu > li > a {
 .carousel-control.right,
 .carousel-control.left {
     background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0) 100%);
+}
+
+/*===========메인 상품 리스트 ==========*/
+.prod-wrap, .prod-inner > a {
+    border: 1px solid #d2d2d2;
+}
+.prod-wrap, .prod-inner {
+    padding: 5px;
+}
+
+.prod-inner > a {
+    display: block;
+    text-align: center;
+    position: relative;
+}
+
+.prod-inner > a > .arrow {
+    display: block;
+    width: 35px;
+    height: 35px;
+    line-height: 37px;
+    background-color: hsl(0, 0%, 39%);
+    color: #fff;
+    position: absolute; /* 부모 영역에 relative*/
+    bottom: 20px;
+    left: 20px;
+    opacity: 0.5;
+}
+.prod-inner > a > .hover {
+    width: 100px;
+    background-color: #037fc3;
+    opacity: 0;/*0이면 투명,1이면 기본*/
+}
+.prod-inner > a:hover > .arrow {
+ opacity: 0;
+}
+.prod-inner > a:hover > .hover {
+    opacity: 1;
+}
+.prod-inner > a:hover {
+    border: 1px solid #037fc3;
+}
+
+
+/* ======블로그 영역========= */
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container > .row > .title {
+    margin-top: 100px;
+    padding-left: 25px;
+}
+.container > .row > .title > h2{
+    margin-bottom: -10px;
+}
+.list {
+    text-align: center;
+}
+== 제품화면 영역== 
+.imgbox{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+    border: 1px solid rgb(216, 216, 216);
+}
+
+ 상품 내용 영역 
+
+
+.name {
+    padding: 15px;
+    text-align: center;
+}
+.name > p {
+    font-size: 16px;
+}
+
+ 별 영역 
+.starbox{
+   
+    overflow: hidden;
+}
+.star-left{
+    float: left;
+}
+.star-left > li {
+    color: #FDCC11;
+}
+.starbox > strong{
+    float: right;
+}
+ 호버영역 
+.imgbox > .hober{
+    left: 0;
+    top: 0;
+    padding: 15px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: hsl(0, 0%, 0%);
+    opacity: 0;
+    box-sizing: border-box;
+}
+.hober:hover {
+    opacity: 0.8;
+}
+.hober > a {
+    text-decoration: none;
+    color: white;
+} */
+
+/* 강사님 블로그 영역 */
+
+@media(min-width:1200px){
+.blog-style > li[class*="col-lg-2"]{
+    width: 20%;
+    }
+}
+.blog-wrap{
+    border: 1px solid #d2d2d2;
+    position: relative;
+    margin-bottom: 30px;
+}
+.blog-wrap > .blog-content {
+    padding: 15%;
+}
+.blog-wrap > .blog-content > p{
+    font-size:  15px;
+    font-weight: bold;
+    min-height: 70px; /*가변 높이*/
+}
+.blog-info {
+    overflow: hidden;
+}
+.blog-info > ul {
+    float: left;
+}
+.blog-info > strong {
+    float: right;
+    font-size: 15px;
+}
+.blog-info > ul > li {
+    display: inline-block;
+    color: #fdcc11;
+}
+
+.blog-wrap > .blog-img {
+    text-align: center;
+   
+}
+.blog-content-hover {
+    background-color: hsl(0, 0%, 0%,.8);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 20px;
+    opacity: 0;
+}
+.blog-content-hover > a {
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    box-sizing: border-box;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.blog-wrap:hover > .blog-content-hover{
+    opacity: 1;
 }

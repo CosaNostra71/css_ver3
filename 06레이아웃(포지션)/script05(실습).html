@@ -9,11 +9,11 @@
     <style>
         * {padding: 0; margin: 0;}
         ul,li {list-style: none;}
-        header {position: fixed; width: 100%; left: 0px; top: 0px;}
+        header {width: 100%; left: 0px; top: 0px; }
         body {background-image: url(images/bg.png); height: 1000px;}
         .logo {text-align: center; margin: 20px auto;}
         .menu {background-color: black; text-align: center;}
-        .menu > ul > li{ display: inline-block; padding: 0px 30px;}
+        .menu > ul > li{ display: inline-block; padding: 0px 5px;}
         .menu > ul > li > a {
             width: 100%;
             display: block;
@@ -22,6 +22,23 @@
             padding: 20px;
             }
         .menu > ul > li > a:hover {background-color: #777;}
+
+        article {display: block;}
+        .item {width: 100%; left: 0; top: 0; 
+               text-align: center; 
+               background-color: white;
+               margin: 0;
+               padding: 0;
+            }
+        .item > ul {width: 960px; margin: 0 auto; overflow: hidden;}
+        .item  ul  li {
+            text-align: center;
+            margin: 40px 0;
+            width: 25%;
+            float: left;
+            box-sizing: border-box;
+        }
+       
     </style>
 
 </head>
@@ -47,6 +64,15 @@
         </nav>
 
     </header>
+
+    <article class="item">
+        <ul>
+            <li><img src="images/item01.png" ></li>
+            <li><img src="images/item02.png"></li>
+            <li><img src="images/item03.png"></li>
+            <li><img src="images/item04.png"></li>
+        </ul>
+    </article>
 
     <section> <!-- 섹션 -->
 
